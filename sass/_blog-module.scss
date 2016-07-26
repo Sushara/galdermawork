@@ -1,0 +1,79 @@
+
+//Blog section//
+@import "classes";
+
+.page-access-module{
+	width: 100%;
+	padding: 60px 20px 0 20px; 
+	background: $white;
+	border-top: solid 1px #575656;
+	margin-bottom:-60px;
+		.row{
+			
+			margin: 0;
+			text-align: center;
+		}
+		.page-block{
+		 	width: auto;
+			height: 300px;
+			vertical-align: top;
+			margin: auto;
+			display: block;
+			float: none;
+			text-align: left;
+			@include tablet{ margin: 48px;width:255px; display:inline-block }
+    		@extend %no-padding;
+			&.block-image::before{
+					background-size: 60px 65px;
+					background-position: 100% 100%;
+					background-repeat: no-repeat;
+					display: inline-block;
+					width: 100%;
+					height: 75px;
+					content: "";
+					position: relative;
+					top: -32px;
+				}
+			&.block-image-about::before{background-image: url('../images/menu_icon_about.png');}
+			&.block-image-personal-development::before{background-image: url('../images/menu_icon_personal_development.png');}
+			&.block-image-products::before{background-image: url('../images/menu_icon_products.png');}
+			&.block-image-clinic-support::before{background-image: url('../images/menu_icon_clinic_support.png');}
+			&.block-image-patient-support::before{background-image: url('../images/menu_icon_patient_support.png');}
+			&.block-image-announcements::before{background-image: url('../images/menu_icon_news.png');}
+
+				h3.block-title{
+					position: absolute;
+					top: -0.3em;
+					font-weight: bold;
+					font-size: 1.4rem;
+					color: #575656;
+					display: flex;
+					align-items: center;
+					width: 100%;
+					text-align: left;
+					max-width: 128px;
+					line-height: 1.1em;
+					text-transform: uppercase;
+					margin-top: 5px;
+				}
+
+				ul{
+					li{
+						border-top: solid 2px #A6A6A4;
+    					padding: 17px 20px 17px 0px;
+    					width: 100%;
+    					display: flex;
+						line-height:1.6;
+    					align-items: center;
+    					background-image: url('../images/arrow_right.png');
+    					background-size: 7px 12px;
+    					background-repeat: no-repeat;
+    					background-position: 100% 50%;
+
+    					&.last{border-bottom: solid 2px #A6A6A4;}
+
+    		  				a{color: #575656; text-transform: uppercase; font-size:16px;}
+					}
+				}
+		}
+}

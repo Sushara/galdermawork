@@ -1,0 +1,88 @@
+//content styles//
+@import "classes";
+@import "common-content";
+.home-page{
+	background: url('../images/background_homepage.jpg') no-repeat center bottom;
+	background-size:cover;
+	@extend %page-background;
+	
+}
+
+.content{
+		text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+		 margin-top:214px;
+		 @include tablet{
+			margin-top:275px;
+		 } 
+		h1{
+			font-size: 29px;
+			text-align:center;
+			color:$white;
+			line-height:27px;
+			font-weight:bold;
+			text-transform: uppercase;
+		}
+		p{
+			@extend %article-para;
+			@include tablet{
+				width: 640px;
+			}
+		}
+	}
+.down-arrow img{
+		width: 63px;
+		display:block;
+		margin: auto;
+		padding-top: 20px;
+		padding-bottom:100px;
+		}
+		
+
+.main-content-sub{
+	.col-xs-12{
+		@extend %no-padding;
+	}
+	.one{
+		 @extend %background;
+		 background-image:url('../images/my_courses.jpg'); 
+	}
+	.two{
+		 @extend %background;
+		 background-image:url('../images/latest_news.jpg');
+		 margin-bottom:110px;
+	}
+	.content-text{
+		@extend %padding-ten;
+
+		@include tablet{
+			margin-left:4em	;	
+		}
+		@include laptop{
+			margin-left:8em	;		
+		}
+		@include laptop-l{
+			margin-left:10em;			
+		}
+		.headings{
+			
+			h2{
+				
+				margin-top:45px;
+				@extend %blue-heading;
+				@include tablet{
+					max-width: 223px;
+					}
+				}					
+			}
+		p {
+			@extend %white-para; 
+			max-width:340px;
+		}
+		button{
+			@extend %white-button;
+			max-width: 187px;
+			
+		}	
+	}
+}
+

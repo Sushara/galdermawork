@@ -1,0 +1,44 @@
+
+@mixin padding($top:null, $right:null, $bottom:null, $left:null){
+	padding-top: $top;
+	padding-right: $right;
+	padding-bottom: $bottom;
+	padding-left: $left;
+}
+@mixin margin($top:null, $right:null, $bottom:null, $left:null){
+	margin-top: $top;
+	margin-right: $right;
+	margin-bottom: $bottom;
+	margin-left: $left;
+}
+@mixin font-styles($color:null,$weight:null,$size:null, $letter-spacing:null){
+	color: $color;
+	font-weight: $weight;
+	font-size: $size;
+	letter-spacing: $letter-spacing;
+}
+@mixin tablet{
+	@media only screen and (min-width:768px){
+		@content;
+	}
+}
+@mixin laptop{
+	@media only screen and (min-width:992px){
+		@content;
+	}
+}
+@mixin laptop-l{
+	@media only screen and (min-width:1024px){
+		@content;
+	}
+}
+@mixin mobile-s {
+  @media (min-width: 375px) {
+    @content;
+  }
+}
+@mixin mobile-l {
+  @media (max-width: 425px) {
+    @content;
+  }
+}

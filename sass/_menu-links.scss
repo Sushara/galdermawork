@@ -1,0 +1,35 @@
+
+$white: #fff;
+
+.navigation{
+    display: block;
+	padding: 10px 8px ;
+	ul.header-menu{
+		    text-align: center;	
+			line-height:1.6;
+			@include tablet{ 
+				text-align: right;
+				margin-right:86px;
+			}
+			li{
+				display: inline-block;
+				font-size: 8px;
+				padding:0px 6px;
+				margin-left: -4px;
+				@include tablet{
+					padding:0px 12px;
+				}
+			}
+			.first{
+				border-right: solid 1px $white;
+			}
+				a{
+					color: $white;
+					line-height: 0.8;
+					font-size:11px;
+					@include tablet{
+						font-size:13px;
+					}
+				}
+		}
+	}

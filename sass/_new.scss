@@ -1,0 +1,260 @@
+.wrapper{
+@include clearfix();
+.title-image{
+			text-align:center;
+			margin:0px 40px 13px;
+			a {display: block !important;
+			img{
+				width: 305px;
+				padding: 0px 8px;
+				}
+			}
+		}
+
+
+nav.navbar-default{
+	@extend %nav-background;
+	.navbar-header{
+		.navbar-brand{
+			
+		    padding: 0;
+    		position: absolute;
+       		margin: 0 55px;
+    		padding-top: 11px;
+    		img{	
+				width: 100%;
+				min-width:224px;
+				max-width:305px;
+				
+				}
+		}
+	}
+	
+	.navbar-toggle{
+			@extend %nav-background;
+			margin-right:5px;
+			padding:0px;
+			margin:0px;
+			position: relative;
+			top:14px;
+			left: -12px;
+			background-color: transparent !important;
+			.icon-bar {background-color: white; width: 18px;}
+	}
+	
+	.navbar-collapse{
+		border:none;
+		ul.navbar-nav{
+			margin: 0px;
+			position: absolute;
+			left:0px;
+			right:0px;
+			margin-top:15px;
+			text-transform: uppercase;
+			border-left: solid 1px white;
+			border-bottom: solid 1px white;
+			background-color:$gray95;
+			z-index:5000;
+				@include tablet-s-min{
+					text-align: center;
+					background:none;
+					border:none;
+					top:-18px;
+				}
+			li.toggle-topbar{
+				border-top:none;
+				position: fixed;
+				width:100%;
+				right: 0px;
+				top: 0em;
+				z-index: 9999;
+				background-color:$gray95;
+				height: 99px;
+				padding-top:20px;
+				padding-left:18px;
+				border-left: solid 1px white;
+				@include tablet-s-min{display:none !important;}
+		
+				&.menu-icon{		
+					a{
+						width: 96%;
+						background-image: url('../images/menu_cross.png');
+						background-size: 23px 23px;
+						background-repeat: no-repeat;
+						background-position: 100% 50%;
+						font-size: 16px;
+						font-weight: bold;
+						position: relative;
+						display: block;padding-left:0px;
+						padding-right:0px;
+				
+						.close-content:before{
+							content: "Close Menu";
+							text-align: left;
+							width: 100%;
+							color: #575656;
+							display: inline-table;
+							
+						}
+					}
+				}
+			}
+			
+			li.block{
+				@extend %nav-arrow;
+				background-position-x: 96%;
+				padding-left:0px;
+				padding-right:0px;
+				
+					@include tablet-s-min{
+					display: inline-block;
+					float:none;
+					background:none;
+					max-width: 7.5em;
+					margin-left:7px;
+					margin-right: 7px;
+					padding: 8px;
+					width: 80%;
+					font-size: 19px;
+				
+				&.dropdown:hover::before{ background-image: url('../images/menu_nav_triangle.png');
+    										background-repeat: no-repeat;
+    										content: '';
+    										position: absolute;
+    										top: 65px;
+    										display: block;
+   											width: 140px;
+    										height: 100px;
+    									}
+				&.dropdown{position: static;
+
+      				.level-1{
+      					display:none;
+      					width: 100%;
+    					background-color: $gray95;
+    					padding: 32px 32px 100px;
+    					text-align: left;
+    					background-image: url('../images/product_information_menu_lady.png');
+    					background-size: 150px 150px;
+    					background-position: 75% 50%;
+    					background-repeat: no-repeat;
+    					border:none;
+    					border-radius:0px;
+    					@include tablet-s{
+    						padding:0;
+    					}
+    					  						
+
+    					li{
+    					  	position: static;
+    						padding: 12px 0 12px 105px;
+    						margin-right:50px;
+    						a{font-weight: bold;
+    						 font-size: 15px;
+    						 color: $black;
+    						 background-color:transparent;
+    						 padding:0px;
+    						}
+
+    						.level-2{
+      				  		    
+    							background-color: transparent;
+    							box-shadow:none;
+    							border:none;
+    							border-radius:0px;
+    							border-left: 1px solid #A6A6A4;
+    							display:none;
+								//li{background-position-x:98% !important;}
+    							&:link , &:visited{display:inline-block;}
+    							@include tablet-s{padding:0;}
+    							@include mobile-l-min-one{position: absolute;left: 400px; top: 17px;}
+    								li {margin:5px 0px;
+    									padding:8px 0;
+										background-position-x: 98% !important;
+    									a{height:20px;}
+                        					a::before{content: 'x';
+                        						color: transparent;
+                        						margin-right: 8px;
+                        						padding-left: 32px;
+                        						position:relative;
+                        						top:5px;
+                        						border-top: 1px solid transparent;
+                        					}
+    									&:hover a::before{border-top: 1px solid $londonhue;
+									}
+    						}
+    					}
+      				}
+   				}
+    			
+    			&:hover .level-1{display:block;}
+    			.dropdown:hover .level-2{display:block;}
+    		}
+			}
+			a.main-menu{
+				line-height: 1.5;
+				font-size: 0.8125em;
+				font-weight: bold;
+				background:transparent;
+				@include tablet-s-min{
+					color:white;
+					font-size:15.5px;
+					padding-right:0px;
+					padding-left:0px;
+				}
+			}
+			ul.dropdown-menu{
+				@include tablet-s-width{padding-bottom:0;}
+				
+				li{
+					width: 100%;
+					@extend %nav-arrow;
+					background-position-x: 96%;
+					&:last-child{
+						@include tablet-s-width{padding-bottom:0;}
+						
+					}
+					@include tablet-s-min{
+						background:none;
+					}
+					a{
+						line-height: 1.5;
+						width: 90%;
+						font-size: 0.9em;
+						font-weight: bold;
+						background:transparent;
+						@include tablet-s{padding: 10px 5px; margin-left: 20px;}
+					}
+				}
+			}
+		}
+	}
+	li{
+	
+		border-top:1px solid black;
+		padding: 0.4em;
+		@include tablet-s-min{border:none;}
+	}
+	
+	}
+	&::after{
+        content: "";
+		border-top: solid 1px white;
+		width: 240px;
+		display: block;
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+		position: absolute;
+		top: 100px;
+		left: 0;
+		right:0;
+		} 
+}
+.welcome-nav::after{
+	@include tablet{
+		border:none !important;
+	}
+	}
+}
+

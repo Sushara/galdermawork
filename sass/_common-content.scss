@@ -1,0 +1,73 @@
+@import"classes";
+
+.main{
+        padding: 0;
+        .header-content{
+            h1{
+               @extend %article-heading;
+            }
+            p{
+               @extend %article-para;
+            }
+        }
+    
+    }
+.sub-content-2{
+        @include clearfix();
+		p{
+				@extend %content-para;
+			}
+            a{text-decoration: underline;}
+
+            h2{
+                @extend %white-heading;
+				margin: 0 0 10px;
+            }
+}
+.main-content-with-image{
+	&.top-one{padding-top:45px;}
+	.col-xs-12{
+		@extend %no-padding;
+	}
+	.content-image{
+		overflow: hidden;
+		img{
+			margin:auto;
+			display:flex;	
+			float:none;
+		}
+	}
+	.content-text{
+		@extend %padding-ten;
+		@include laptop{
+			margin-left:6em;
+		}
+		.headings{
+			
+			h2 {
+				@extend %white-heading;
+				margin-top:45px;
+				 @include tablet{
+					max-width:331px;
+				}
+			}
+		}
+		p {
+			@extend %content-para; 
+			max-width:368px;
+			margin-top:20px;
+		}
+		button{
+			@extend %blue-button;
+			max-width: 173px;
+		}	
+	}
+}
+.bottomUnderline {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background-color: #686666;
+}

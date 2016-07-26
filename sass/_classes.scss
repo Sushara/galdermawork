@@ -1,0 +1,112 @@
+//common classes//
+%page-background {
+		height: 814px;
+		width: 100%;
+		left: 0;
+		margin:0;
+	}
+%article-para{
+	 margin:auto;
+	font-size: 22px;
+	text-align: center;
+	color: $white;
+	padding:13px 10px 15px 10px;
+	line-height: 1.66;
+}
+%article-heading{
+	 color: $white;
+     font-size: 32px;
+     font-weight: normal;
+     margin: 7px 0 16px;
+
+}
+%white-heading{
+	background-color: #002d72;
+    padding: 10px 14px;
+    font-size: 23px;
+    color: $white;
+    //margin: 0 0 10px;
+	line-height: 1.2;
+	font-weight:bold;
+	text-align:left;
+	text-transform:uppercase;
+}
+%blue-heading{
+	color: #002d72;
+	background-color: white;
+    padding: 8px 14px;
+    font-size: 23px;
+    //margin: 0 0 10px;
+	line-height: 1.2;
+	font-weight:bold;
+	text-align:left;
+	text-transform:uppercase;
+
+}
+
+%content-para{
+	font-size: 1em;
+	line-height: 1.7;
+	margin-bottom: 30px;
+	color:#767674;
+	text-align:left;
+	
+}
+%white-para{
+	font-size: 1em;
+	line-height: 1.6;
+	margin-bottom: 1.25em;
+	color:$white;
+	text-align:left;
+
+}
+%blue-button{
+	color: #002d72;
+	border: 1px solid #002d72;
+	width: 100%;
+	height: 36px;
+	font-size: 14px;
+	display: block;
+	margin-top: 33px;
+	font-weight: bold;
+	line-height: 18px;
+	
+}
+%white-button{
+	color: white;
+	border: 1px solid white;
+	width: 100%;
+	height: 36px;
+	font-size: 14px;
+	display: block;
+	margin-top: 33px;
+	font-weight: bold;
+	line-height: 18px;
+	
+}
+%no-padding{
+	    @include padding($left: 0px, $right:0px);
+}
+%padding-ten{
+	@include padding($left:10px, $right:10px);
+}
+%background{
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size:cover;
+	padding: 0px;
+	height:361px;
+	margin-top:30px;
+}
+%full-width{
+
+	width: 100%;
+	left: 0;
+	right:0;
+	position: absolute;
+}
+%ul-list-style{
+
+	color: #767674;
+	line-height:28px;
+}

@@ -1,0 +1,30 @@
+@import "mixin";
+
+html,body{
+	width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+    font-family: "Gotham Light", Arial, sans-serif;
+}
+
+
+.row{
+	@include clearfix();
+}
+.seperator{
+	margin-bottom: 40px;
+}
+.bottomUnderline{
+            margin-top: 20px;
+    margin-bottom: 40px;
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background-color: #686666;
+}
+.row{
+	margin-left: 0;
+	margin-right: 0;
+}

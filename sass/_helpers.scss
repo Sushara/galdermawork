@@ -1,0 +1,59 @@
+@import "variables";
+%icon-image{
+	background-image: url('../images/arrow.jpg');
+    position:absolute;
+    background-repeat: no-repeat;
+}
+%icon-image-2{
+	background-image: url('../images/arrow.jpg');
+    position:relative;
+   
+}
+
+%transitions{
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+%color{
+	color: #fff;
+	display: block;
+	background-color: transparent;
+}
+%bottom-margin{
+	margin-bottom: 0;
+}
+%font-weight{
+	font-weight:700;
+}
+%no-padding{
+	padding-left: 0;
+	padding-right: 0;
+}
+%libre{
+	font-family: 'Libre Baskerville', serif;
+  	letter-spacing: 0px;
+  	font-weight:500;
+}
+%blueBorderbtn{
+			
+            padding: 8px 10px;
+            font-size: 13px;
+            line-height: 1.4;
+            font-family: "Gotham book",Helvetica,Arial,sans-serif;
+            color: $very-dark-blue;
+            border: 1px solid $very-dark-blue;
+}
+%nav-background{
+	background-color:transparent;
+	border:none;
+}
+%nav-arrow{
+	background-image: url('../images/arrow_right.png');
+				background-position-y: 10px;
+				background-size: 15px 30px;
+				background-repeat: no-repeat;
+				
+}

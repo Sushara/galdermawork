@@ -1,0 +1,68 @@
+@import "classes";
+.announcement-home-page{
+	background: url('../images/background_announcements.jpg') no-repeat center bottom;
+	@extend %page-background;
+	
+}
+.myaccount-article{
+	@include tablet{
+		margin-top:77px;
+	}
+}
+.announcement{
+	padding-top:420px;
+	position:relative;
+	text-align:left;
+	@include content-width(1050px);
+	color:white;
+	margin-bottom:200px;
+	img{
+		@extend %image;
+	}
+	.announcement-date{
+		position: absolute;
+		top: 419px;
+		right: 9%;
+		background-color: #fff;
+		font-size: 13px;
+		padding: 10px 20px;
+		font-family: "Gotham book", Helvetica,Arial,sans-serif;
+		@include tablet{
+			top:510px;
+		}
+	}
+	.announcement-content{
+		background-color: #4f4d4d;
+		padding-left: 20px;
+		padding-bottom:50px;
+		@include tablet{
+			padding-left:100px;
+		}
+		h2{
+			
+			text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.75);
+			font-weight: bold;
+			font-size: 23px;
+			max-width: 300px;
+			padding-top: 40px;
+			margin-bottom: 0.5em;
+			line-height: 1.2125em;
+		}
+		p{
+			
+			text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.75);
+			//font-size: 16px;
+			max-width: 280px;
+			margin-bottom: 10px !important;
+			@extend %white-para;
+			//line-height: 1.6;
+		}
+		a{
+			font-size: 16px;
+			color: #fff;
+			padding: 6px;
+			border: 1px solid #fff;
+		}
+	}
+
+}
